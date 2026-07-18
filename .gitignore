@@ -1,0 +1,61 @@
+# --- Diretórios de Compilação e Build ---
+antiga/
+db/
+incremental_db/
+output_files/
+greybox_tmp/
+sld_chp/
+qdb/
+hps_isw_handoff/
+# Ignora pastas de IP
+ip/
+
+# --- Arquivos Temporários de Sintese e Simulação ---
+*.qmsg
+*.qmsg_bak
+*.done
+*.jdi
+*.pin
+*.sof
+*.pof
+*.ttf
+*.rbf
+*.srec
+*.qdf
+*.sld
+*.bsf
+*.bak
+*.summary
+*.qws
+*.ddb
+*.campaign
+
+# --- Logs e Arquivos de Relatório ---
+*.log
+*.rpt
+*.htm
+PLLJ_PLLSPE_INFO.txt
+fpga_db/
+
+# --- Arquivos de Backup do Quartus ---
+assignment_defaults.qdf
+undo_redo.txt
+*.qarlog
+
+# --- ModelSim (Simulação) ---
+work/
+transcript
+vsim.wlf
+*.vcd
+*.wlf
+
+# --- Gerados pelo Platform Designer (Qsys) ---
+*.sopcinfo
+*.qsys
+# Apenas a pasta de síntese gerada automaticamente
+**/synthesis/
+**/simulation/
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
