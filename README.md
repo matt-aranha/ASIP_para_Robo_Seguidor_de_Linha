@@ -8,7 +8,8 @@ O objetivo principal deste projeto é entender na prática como funciona o DataP
 
 ---
 
-## 1. Visão Geral e Materiais
+<details>
+<summary><h2>1. Visão Geral e Materiais</h2></summary>
 
 O ASIP atua como o "cérebro" do robô, sendo responsável por ler continuamente os estados dos sensores reflexivos, processar a lógica de desvio e enviar sinais de acionamento para a ponte H que controla os motores DC.
 
@@ -32,10 +33,11 @@ O ASIP atua como o "cérebro" do robô, sendo responsável por ler continuamente
 <br>
 
 ![Foto da FPGA do LabH1 - DCOMP](documentation\FPGA_ED2.png)
+</details>
 
----
 
-## 2. Arquitetura e Módulos do Processador
+<details>
+<summary><h2>2. Arquitetura e Módulos do Processador</h2></summary>
 
 ### Diagrama do Datapath
 
@@ -53,9 +55,11 @@ O hardware foi descrito de forma estrutural e modular em Verilog, resultando em 
 * **Módulo de I/O (`io_asip.v`):** Interface de memória mapeada (Memory-Mapped I/O). Isola o Datapath do mundo exterior, roteando dados para endereços físicos (`8'h10` para leitura dos sensores e `8'h20` para escrita nos motores).
 * **Top-Level (`line_follower_asip_top.v`):** Módulo principal que instancia e interconecta todos os submódulos descritos acima utilizando barramentos e define os multiplexadores estruturais de roteamento lógico.
 
----
+</details>
 
-## 3. Conjunto de Instruções (ISA) e Firmware
+
+<details>
+<summary><h2>3. Conjunto de Instruções (ISA) e Firmware</h2></summary>
 
 O processador foi projetado com um Conjunto de Instruções (ISA) contendo 8 instruções essenciais. A estrutura da instrução de 16 bits é particionada da seguinte forma: <br>
 `[Opcode: 4 bits] | [Reg. Destino: 2 bits] | [Reg. Origem: 2 bits] | [Imediato: 8 bits]`
@@ -75,9 +79,11 @@ O processador foi projetado com um Conjunto de Instruções (ISA) contendo 8 ins
 
 O código de máquina executado pela FPGA está localizado no arquivo `firmware.txt`. Ele implementa um loop infinito que lê os dados dos sensores `TCRT5000` e atua sobre os motores, garantindo microcorreções de trajetória (sprint para frente, curva à esquerda, curva à direita e modo de busca).
 
----
+</details>
 
-## 4. Implementação em Hardware: FPGA Cyclone II
+
+<details>
+<summary><h2>4. Implementação em Hardware: FPGA Cyclone II</h2></summary>
 
 O projeto foi sintetizado e validado fisicamente utilizando a placa Altera DE2 (Cyclone II - EP2C35F672C6). 
 
@@ -97,9 +103,11 @@ O processo de Análise e Síntese otimizou o código em RTL gerando o seguinte r
 
 A gravação do arquivo `.sof` (SRAM Object File) na FPGA foi conduzida através da interface USB-Blaster e gerenciada pela ferramenta Programmer do Quartus II.
 
----
+</details>
 
-## 5. Conclusão e Trabalhos Futuros
+
+<details>
+<summary><h2>5. Conclusão e Trabalhos Futuros</h2></summary>
 
 A execução deste projeto permitiu consolidar, de forma prática, o entendimento sobre o funcionamento interno de um processador, desmistificando o papel do DataPath como o coração da unidade central de processamento.
 
@@ -113,9 +121,12 @@ Ficou evidente como um arranjo estruturado de silício — inicialmente apenas u
 2.  **Modulação por Largura de Pulso (PWM) em Hardware:** Adição de módulos divisores de clock na camada de I/O para controlar de forma dinâmica e granular a tensão enviada à Ponte H, suavizando as curvas do robô.
 3.  **Controle PID:** Alteração do firmware e da capacidade de ALU para implementar cálculo Proporcional-Integral-Derivativo, permitindo leitura de arranjos de sensores em barra e alcançando altas velocidades de pista.
 
----
+</details>
 
-## 6. Referências
+
+<details>
+<summary><h2>6. Referências</h2></summary>
+
 
 ![Referênciais](documentation\refs.png)
 
@@ -126,6 +137,7 @@ Por escrito, caso queiram pesquisá-las:
 3.  **THOMAS, D.; MOORBY, P.** *The Verilog Hardware Description Language*. 5. ed. Springer Science & Business Media, 2008.
 4.  **IEEE Standard for Verilog Hardware Description Language** (IEEE Std 1364-2001).
 
----
+</details>
+
 
 *Projeto acadêmico desenvolvido por [Mateus Aranha](https://github.com/matt-aranha) para fins educacionais na disciplina de Sistemas Digitais.* <br> **© 2026. All rights reserved.**
