@@ -1,0 +1,21 @@
+// Descrição : arquivo de pinagem contendo o mapeamento do módulo line_follower_asip_top
+//             para a placa S (S-Board), Sistema de Emulação Pitanga (In-Place).
+//
+// Os dois sensores TCRT5000 são simulados pelas chaves sw0 (sensor DIREITO) e
+// sw1 (sensor ESQUERDO) — chave para CIMA/ligada = "detectou a linha preta".
+// Os motores (Ponte H L9110S: IN1/IN2 = motor esquerdo, IN3/IN4 = motor direito)
+// são simulados pelos LEDs led0-led3.
+//
+//  MODULE PORT         BOARD COMPONENT
+    clk                 =   clk_1hz;
+    reset               =   btn0;
+
+// sensores_in[0] = sensor DIREITO, sensores_in[1] = sensor ESQUERDO
+    sensores_in[0]      =   sw0;
+    sensores_in[1]      =   sw1;
+
+// motores_out[3:0] = {IN4, IN3, IN2, IN1} da Ponte H L9110S
+    motores_out[0]      =   led0;
+    motores_out[1]      =   led1;
+    motores_out[2]      =   led2;
+    motores_out[3]      =   led3;
