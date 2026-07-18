@@ -2,7 +2,7 @@
 
 ![Imagem de Capa](documentation/imagem_de_capa.png)
 
-Este repositório contém o código-fonte em **Verilog** e a documentação de um microprocessador de ciclo único desenvolvido sob medida para o controle de um robô seguidor de linha autônomo. O processador foi desenvolvido por mim como projeto final para a disciplina de Sistemas Digitais (COMP0514) da Universidade Federal de Sergipe (UFS).
+Este repositório contém o código-fonte em **Verilog** e a documentação de um microprocessador de ciclo único desenvolvido sob medida para o controle de um robô seguidor de linha autônomo. O processador foi desenvolvido por mim como projeto final para a disciplina de Sistemas Digitais (COMP0514) da Universidade Federal de Sergipe (UFS), ministrada pelos Professores Dr. Calebe Micael e Dr. Rodolfo Botto.
 
 O objetivo principal deste projeto é entender na prática como funciona o DataPath de um processador, compreendendo como que 'um arranjo estruturado de silício' consegue interpretar estímulos do mundo externo, realizar tomadas de decisões lógicas e transformá-las em ações.
 
