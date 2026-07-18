@@ -1,6 +1,6 @@
 # Application-Specific Instruction-set Processor (ASIP) para Robô Seguidor de Linha
 
-![Capa](documentation/capa.png)
+![Imagem de Capa](documentation/imagem_de_capa.png)
 
 Este repositório contém o código-fonte em **Verilog** e a documentação de um microprocessador de ciclo único desenvolvido sob medida para o controle de um robô seguidor de linha autônomo. O processador foi desenvolvido por mim como projeto final para a disciplina de Sistemas Digitais (COMP0514) da Universidade Federal de Sergipe (UFS).
 
@@ -64,7 +64,7 @@ O hardware foi descrito de forma estrutural e modular em Verilog, resultando em 
 O processador foi projetado com um Conjunto de Instruções (ISA) contendo 8 instruções essenciais. A estrutura da instrução de 16 bits é particionada da seguinte forma: <br>
 `[Opcode: 4 bits] | [Reg. Destino: 2 bits] | [Reg. Origem: 2 bits] | [Imediato: 8 bits]`
 
-![Definição da ISA](documentation/Definicao_Da_ISA.png)
+![Definição da ISA](documentation/imagem_isa.png)
 
 | Mnemônico | Opcode | Descrição |
 | :--- | :--- | :--- |
@@ -111,7 +111,7 @@ A gravação do arquivo `.sof` (SRAM Object File) na FPGA foi conduzida através
 
 A execução deste projeto permitiu consolidar, de forma prática, o entendimento sobre o funcionamento interno de um processador, desmistificando o papel do DataPath como o coração da unidade central de processamento.
 
-![Conclusão e Pontos a Melhorar](documentation/conclusao.png)
+![Conclusão e Pontos a Melhorar](documentation/imagem_de_conclusao.png)
 
 Ficou evidente como um arranjo estruturado de silício — inicialmente apenas um conjunto de transistores e portas lógicas — é capaz de decodificar e interpretar estímulos elétricos do mundo externo. Através do sincronismo dos sinais de controle e do fluxo correto dos dados, observou-se na prática como esses estímulos brutos são transformados em tomadas de decisões lógicas complexas e, finalmente, convertidos em ações físicas e computacionais concretas. 
 
