@@ -147,7 +147,7 @@ Caso queira testar o funcionamento do processador nos quatro cenários possívei
 
 ![Descrição da Simulação](documentation/descricao_da_simulacao.png)
 
-Uma vez que a Sistema de Emulação Pitanga — feito pela empresa In-Place, esteja aberto, basta colar o código verilog unificado e adaptado para o compilador da Pitanga no campo superior-direito (`Hardware Description / Descrição do Hardware: pitanga.v`), e o arquivo de pinagem no campo inferior-direito (`Pinout / Pinagem: pitanga.pinout`).
+Uma vez que a Sistema de Emulação Pitanga — feito pela empresa In-Place, esteja aberto, basta colar o [código verilog](pitanga/line_follower_asip_pitanga.v) unificado e adaptado para o compilador da Pitanga no campo superior-direito (`Hardware Description / Descrição do Hardware: pitanga.v`), e o [arquivo de pinagem](pitanga/line_follower_asip.pinout) no campo inferior-direito (`Pinout / Pinagem: pitanga.pinout`).
 
 ![Tela de edição da S-Board](documentation/s-board_pitanga.png)
 
