@@ -140,4 +140,18 @@ Por escrito, caso queiram pesquisá-las:
 </details>
 
 
+<details>
+<summary><h2>7. Extra: Simulação na S-Board da Pitanga</h2></summary>
+
+Caso queira testar o funcionamento do processador nos quatro cenários possíveis, descritos na imagem abaixo, será necessário ter acesso à placa S-Board da Pitanga (a pitanga oferece placas mas simples do forma gratuita, porém para conseguir emular todo o código em Verilog do processador, somente atráves da S-Board inclusa no plano estudante).
+
+![Descrição da Simulação](documentation/descricao_da_simulacao.png)
+
+Uma vez que a Sistema de Emulação Pitanga — feito pela empresa In-Place, esteja aberto, basta colar o código verilog unificado e adaptado para o compilador da Pitanga no campo superior-direito (`Hardware Description / Descrição do Hardware: pitanga.v`), e o arquivo de pinagem no campo inferior-direito (`Pinout / Pinagem: pitanga.pinout`).
+
+![Tela de edição da S-Board](documentation/s-board_pitanga.png)
+
+</details>
+
+
 *Projeto acadêmico desenvolvido por [Mateus Aranha](https://github.com/matt-aranha) para fins educacionais na disciplina de Sistemas Digitais.* <br> **© 2026. All rights reserved.**
